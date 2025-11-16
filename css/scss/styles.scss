@@ -1,0 +1,75 @@
+@import 'colors';
+
+//Global
+$main-font: Helvetica, Arial, sans-serif;
+@mixin rounded-button($radius, $bg, $textcolor) {
+    border-radius: $radius;
+    background-color: $bg;
+    color: $textcolor;
+    border: 0;
+    cursor: pointer;
+    width: 7em;
+    height: 2.5em;
+    font-size: 0.5rem;
+    font-weight: normal;
+    padding: 0.5em 2em;
+}
+* {
+    color: white;
+    font-size: 1.2rem;
+    font-family: $main-font;
+}
+
+.container {
+    background-color: $yellow;
+    border: 1px solid #000;
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1em;
+    width: 50%;
+
+    .left {
+        background-color: $olive;
+        height: 100%;
+        width: 69%;
+        position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+
+    .right {
+        background-color: $light-green;
+        height: 100%;
+        position: relative;
+        width: 29%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .button {
+            background-color: $lime;
+            color: $olive;
+            border: 0;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 7em;
+            height: 2.5em;
+            font-size: 0.5rem;
+            font-weight: normal;
+            padding: 0.5em 2em;
+
+            //this is to center content vertically
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -120%);
+        }
+    }
+
+}
